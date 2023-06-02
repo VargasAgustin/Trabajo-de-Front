@@ -28,19 +28,13 @@ nav {
     background-color: black;
 }
 
-.btn-comprar{
-    background-color: rgb(73, 182, 67);
-    border: 1px solid rgb(73, 182, 67) ;
-}
 .dim{
-    margin-top: 10vh ;
+    margin-top: 10vh;
     padding: 10vw;
 }
 
 @media (min-width : 992px) {
     .dim{
-        margin-top: 40vh ;
-        
         padding: 10vw;
     }
 }
@@ -48,8 +42,12 @@ nav {
     background-color: #1e516e ; 
 }
 .hover:hover{
+    background-color: #96c93ed0;
+}
+.navhover1:hover{
     opacity: 50%;
 }
+
 .btn-form-fondo{
     background-color: #96c93e;
     color: white;
@@ -58,3 +56,4 @@ nav {
     height: auto;
     max-height: auto;
 }
+

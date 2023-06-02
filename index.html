@@ -13,17 +13,17 @@
 <header>
   <nav class="navbar navbar-expand-lg text-light">
     <div class="container-fluid">
-      <a class="navbar-brand text-light icono" href="#"><img src="../Trabajo-de-Front/img/iconcodoacodo.png" class="icono" alt="">Conf Bs As</a>
+      <a class="navbar-brand text-light icono" href="index.html"><img src="/img/iconcodoacodo.png" class="icono" alt="">Conf Bs As</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-lg-end text-center" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="text-light nav-link" href="#">La Conferencia</a>
-          <a class="text-light nav-link" href="#">Los Oradores</a>
-          <a class="text-light nav-link" href="#">El lugar y la fecha</a>
-          <a class="text-light nav-link" href="#">Conviertete en el orador</a>
-          <a class="nav-link text-success fw-bold" href="#">Comprar tickets</a>
+        <div class="navbar-nav me-3">
+          <a class="text-light nav-link navhover1" href="#">La Conferencia</a>
+          <a class="text-light nav-link navhover1" href="#">Los Oradores</a>
+          <a class="text-light nav-link navhover1" href="#">El lugar y la fecha</a>
+          <a class="text-light nav-link navhover1" href="#">Conviertete en el orador</a>
+          <a class="nav-link text-light hover fw-bold btn-form-fondo rounded-4" href="ticket.html">Comprar tickets</a>
         </div>
       </div>
     </div>
@@ -31,46 +31,40 @@
 </header>
 <main>
     <!-- carrusel -->
-     <section class="text">
-        <div id="carouselExampleIndicators" class="carousel slide">
-      
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          </div>
+    <section class="text">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" >
 
           <div class="carousel-inner position-relative">
             
-              <div class="position-absolute z-1 text-center text-lg-end row  justify-content-end dim ">
+              <div class="position-absolute z-1 text-center text-lg-end row  justify-content-end dim">
                   <h4 class="col-lg-6">Conf Bs As</h4>
                   <div class="w-100"></div>  
                   <p class="col-lg-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas alias fuga velit, inventore sint, atque sit obcaecati incidunt magnam modi praesentium cupiditate porro placeat ducimus, non consequuntur laudantium sunt ut!</p>
                   <div class="w-100"></div>
                   <div class="col-lg-6">
                       <div class=" row mt-5 mt-lg-0 pt-5 pt-lg-0 justify-content-end text-nowrap">
-                        <button class="col-lg-4 btn btn-outline-light my-4 me-lg-1">Quiero ser orador</button>
-                        <button class=" col-lg-4 btn btn-success my-lg-4">Comprar tickets</button>
+                        <button class="col-lg-4 btn btn-light my-4 me-lg-1">Quiero ser orador</button>
+                        <button class=" col-lg-4 btn btn-form-fondo hover my-lg-4">Comprar tickets</button>
                       </div>
                     </div>         
               </div>
 
             <div class="carousel-item active bg-img">
-              <img src="../Trabajo-de-Front/img/ba1.jpg" class="d-block w-100 img-slide" alt="slide1">
+              <img src="/img/ba1.jpg" class="d-block w-100 img-slide" alt="slide1">
             </div>
             <div class="carousel-item bg-img">
-              <img src="../Trabajo-de-Front/img/ba2.jpg" class="d-block w-100 img-slide" alt="slide2">
+              <img src="/img/ba2.jpg" class="d-block w-100 img-slide" alt="slide2">
             </div>
             <div class="carousel-item bg-img">
-              <img src="../Trabajo-de-Front/img/ba3.jpg" class="d-block w-100 img-slide" alt="slide3">
+              <img src="/img/ba3.jpg" class="d-block w-100 img-slide" alt="slide3">
             </div>
           </div>
 
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
@@ -86,7 +80,7 @@
                 <div class="card-group text-start border-light d-flex flex-column flex-md-row align-items-center align-items-md-start justify-content-md-around w-75 mx-auto">
                   <!-- card -->
                   <div class="card shadow-sm mb-4 rounded-3 mx-2 " style="width: 18rem;">
-                    <img src="../Trabajo-de-Front/img/steve.jpg" class="card-img-top" alt="Steve">
+                    <img src="/img/steve.jpg" class="card-img-top" alt="Steve">
                     <div class="card-body text-dark">
                       <span class="badge text-bg-warning">JavasScript</span>
                       <span class="badge text-bg-info">React</span>
@@ -96,7 +90,7 @@
                   </div>
                   <!-- card -->
                   <div class="card shadow-sm mb-4 rounded-3 mx-2 " style="width: 18rem;">
-                    <img src="../Trabajo-de-Front/img/bill.jpg" class="card-img-top" alt="Bill">
+                    <img src="/img/bill.jpg" class="card-img-top" alt="Bill">
                     <div class="card-body text-dark">
                       <span class="badge text-bg-warning">JavasScript</span>
                       <span class="badge text-bg-info">React</span>
@@ -106,7 +100,7 @@
                   </div>
                   <!-- card -->
                   <div class="card shadow-sm mb-4 rounded-3 mx-2 " style="width: 18rem;">
-                    <img src="../Trabajo-de-Front/img/ada.jpeg" class="card-img-top" alt="Ada">
+                    <img src="/img/ada.jpeg" class="card-img-top" alt="Ada">
                     <div class="card-body text-dark">
                       <span class="badge text-bg-secondary">Negocios</span>
                       <span class="badge text-bg-danger">Startups</span>
@@ -119,9 +113,9 @@
       </section>
 
       <!-- card horizontal -->
-      <section class="row ">
+      <section class="row m-0">
           <div class="col-12 col-md-6 p-0">
-            <img src="../Trabajo-de-Front/img/hawaii2.jpg" alt="imagen" class="img-fluid h-100 object-fit-cover">
+            <img src="/img/hawaii2.jpg" alt="imagen" class="img-fluid h-100 object-fit-cover">
           </div>
           <div class="col-12 col-md-6 bg-dark text-light text-center text-md-start opacity-75">
             <h3 class="p-4">Bs As - Octubre </h3>
@@ -129,7 +123,7 @@
             <a href="#" class="btn btn-outline-light m-4">Conocé más</a>
 
           </div>
-                 
+
       </section>
       <!-- formulario section -->
       <section class="bg-white text-center altura-form">
@@ -140,9 +134,9 @@
                     <input class="col-6 col-lg form-control my-2 my-lg-4 me-lg-3 " type="text"  placeholder="Nombre">
                     <input class="col-6 col-lg form-control my-2 my-lg-4 ms-lg-3 " type="text" placeholder="Apelido">
                     
-                      <textarea class="form-control " id="textarea" rows="5">Sobre que quieres hablar?</textarea> 
+                      <textarea class="form-control " id="textarea" rows="5" placeholder="Sobre que quieres hablar?"></textarea> 
                       <span class=" form-text">Recuerda incluir un título para tu charla</span>
-                      <input class=" my-4 btn btn-form-fondo" type="submit" value="Enviar">
+                      <input class=" my-4 btn btn-form-fondo hover" type="submit" value="Enviar">
                     
               </div>
       </section>
@@ -150,7 +144,7 @@
 
 </main>
 
-<footer class="row flex-column flex-lg-row bg-footer text-center py-4">
+<footer class="row m-0 flex-column flex-lg-row bg-footer text-center py-4">
   
   <a href="#" class="hover col py-1 text-decoration-none text-light " >Preguntas frecuentes</a>
   <a href="#" class="hover col py-1 text-decoration-none text-light " >Contáctanos</a>
