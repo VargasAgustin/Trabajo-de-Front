@@ -1,45 +1,26 @@
-const cant = document.querySelector("#cantidad");
+//llamada de elementos del DOM
+const cantTickets = document.querySelector("#cantidad");
 const selector = document.querySelector("select");
 const importe = document.querySelector("label[for=monto]");
-
 const btnResumen = document.querySelector("#resumen");
 const btnBorrar = document.querySelector("#borrar");
 
-
 const precioTicket= 200;
+//valor del selector ingresado por el usuario
+let valSelect;
+selector.addEventListener('input',()=>valSelect=selector.value);
+//cantidad de tickets ingresado por el usuario
+let valCant;
+cantTickets.addEventListener('input',()=>valCant=cantTickets.value);
 
-// let descuento;
-// selector.addEventListener('change', descuento => descuento=selector.value);
+btnResumen.addEventListener('click',totalAPagar);
+//funcion que calcula el valor a pagar segun los datos ingresados
+let total;
+function totalAPagar(){
+let total;
+    if(valSelect==1)total=(precioTicket*.2)*valCant
+    if(valSelect==2)total=(precioTicket*.5)*valCant
+    if(valSelect==3)total=(precioTicket*.75)*valCant
 
-// prueba 
-let des = selector.value;
-selector.addEventListener('change',()=>des=selector.value)
-btnResumen.addEventListener('click',console.log(des))
-
-
-function total(){
-    let impo=200;
-    let des = selector.addEventListener('change',a=>a=selector.value);
-    
-    // switch(selector.addEventListener('change',descuento=>descuento=selector.value)){
-    //     case 1 : (impo=impo*.2)
-    //     break;
-    //     case 2 : impo = impo*.5
-    //     break;
-    //     case 3 : impo = impo*.75
-    //     break;
-       
-    // }
-    // impo=impo*(cant.value);
-    return impo;
+importe.insertAdjacentText('beforeend',total);
 }
-
-// btnResumen.addEventListener('click',()=>{
-// importe.insertAdjacentHTML("beforeend",total());
-// });
-// btnBorrar.addEventListener('click',);
-
-
-// cant.addEventListener('input',()=> console.log(cant.value));
-
-// selector.addEventListener("click",() => { let valopt = selector.value;}); 
