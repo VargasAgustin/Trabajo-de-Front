@@ -1,3 +1,7 @@
+body{
+    min-height: 100vh;
+}
+
 nav {
     background-color:#353a40;
 }
@@ -27,6 +31,12 @@ nav {
 .bg-img{
     background-color: black;
 }
+
+.btn-comprar{
+    background-color: rgb(73, 182, 67);
+    border: 1px solid rgb(73, 182, 67) ;
+}
+
 
 .dim{
     margin-top: 10vh;
