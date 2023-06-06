@@ -64,15 +64,17 @@
     <h2 class="text-center">Valor de ticket $200</h2>
     
     <section class="row m-0 m-3 justify-content-center">
-            
+            <!-- nombre -->
             <div class="col-md-4 my-2 form-floating">
-                <input type="text" class=" form-control" id="name" placeholder="Nombre">
+                <input type="text" class=" form-control" id="name" placeholder="nombre">
                 <label class="ps-4" for="name">Nombre</label>
             </div>
+            <!-- //Apellido -->
             <div class="col-md-4 my-2 form-floating">    
-                <input type="text" class="form-control" id="lastname" placeholder="Apellido">
+                <input type="text" class="form-control" id="lastname" placeholder="apellido">
                 <label class="ps-4" for="lastname">Apellido</label>
             </div>
+            <!-- //email -->
             <div class="col-md-8 my-2 form-floating">    
                 <input type="email" class="form-control" id="email" placeholder="Email">
                 <label class="ps-4" for="email">Email</label>
@@ -80,13 +82,13 @@
             <div class="row m-0"></div>
                 <!-- cantidad de tickets -->
                 <div class="col-md-4 my-2 form-floating">    
-                    <input type="number" class="form-control" id="cantidad" placeholder="Cantidad">
+                    <input type="number" class="form-control" min="0" id="cantidad" placeholder="Cantidad">
                     <label class="ps-4" for="cantidad">Cantidad</label>
                 </div>
                 <!-- selector -->
                 <div class="col-md-4 my-md-auto">
                     <select id="selector"class="form-select form-select-lg py-md-2">
-                        <option selected>Categoria</option>
+                        <option value=0 selected>Categoria</option>
                         <option value="1">Estudiante</option>
                         <option value="2">Trainee</option>
                         <option value="3">Junior</option>
