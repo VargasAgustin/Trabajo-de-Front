@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
+
+    <title>Codo a Codo</title>
+</head>
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg text-light">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light icono" href="index.html"><img src="../Trabajo-de-Front/img/iconcodoacodo.png" class="icono" alt="">Conf Bs As</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-lg-end text-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav me-3">
+          <a class="text-light nav-link navhover1" href="#">La Conferencia</a>
+          <a class="text-light nav-link navhover1" href="#">Los Oradores</a>
+          <a class="text-light nav-link navhover1" href="#">El lugar y la fecha</a>
+          <a class="text-light nav-link navhover1" href="#">Conviertete en el orador</a>
+          <a class="nav-link text-light hover fw-bold btn-form-fondo rounded-4" href="ticket.html">Comprar tickets</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<main>
+    <!-- carrusel -->
+    <section class="text">
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" >
+
+          <div class="carousel-inner position-relative">
+            
+              <div class="position-absolute z-1 text-center text-lg-end row  justify-content-end dim">
+                  <h4 class="col-lg-6">Conf Bs As</h4>
+                  <div class="w-100"></div>  
+                  <p class="col-lg-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas alias fuga velit, inventore sint, atque sit obcaecati incidunt magnam modi praesentium cupiditate porro placeat ducimus, non consequuntur laudantium sunt ut!</p>
+                  <div class="w-100"></div>
+                  <div class="col-lg-6">
+                      <div class=" row mt-5 mt-lg-0 pt-5 pt-lg-0 justify-content-end text-nowrap">
+                        <button class="col-lg-4 btn btn-light my-4 me-lg-1">Quiero ser orador</button>
+                        <a class="col-lg-4 btn btn-form-fondo hover my-lg-4 text-light hover fw-bold rounded-4" href="ticket.html">Comprar tickets</a>
+                      </div>
+                    </div>         
+              </div>
+
+            <div class="carousel-item active bg-img">
+              <img src="../Trabajo-de-Front/img/ba1.jpg" class="d-block w-100 img-slide" alt="slide1">
+            </div>
+            <div class="carousel-item bg-img">
+              <img src="../Trabajo-de-Front/img/ba2.jpg" class="d-block w-100 img-slide" alt="slide2">
+            </div>
+            <div class="carousel-item bg-img">
+              <img src="../Trabajo-de-Front/img/ba3.jpg" class="d-block w-100 img-slide" alt="slide3">
+            </div>
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+
+        </div>
+      </section>
+      
+      <!-- //cards section -->
+      <section class="bg-white text-center">
+                <h6 class="mt-2">Conoce a los</h6>
+                <h3 class="mb-4">Oradores</h3>
+                <!-- grupo de cards -->
+                <div class="card-group text-start border-light d-flex flex-column flex-md-row align-items-center align-items-md-start justify-content-md-around w-75 mx-auto">
+                  <!-- card -->
+                  <div class="card shadow-sm mb-4 rounded-3 mx-2 " style="width: 18rem;">
+                    <img src="../Trabajo-de-Front/img/steve.jpg" class="card-img-top" alt="Steve">
+                    <div class="card-body text-dark">
+                      <span class="badge text-bg-warning">JavasScript</span>
+                      <span class="badge text-bg-info">React</span>
+                      <h5 class="card-title">Steve Jobs</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                  <!-- card -->
+                  <div class="card shadow-sm mb-4 rounded-3 mx-2 " style="width: 18rem;">
+                    <img src="../Trabajo-de-Front/img/bill.jpg" class="card-img-top" alt="Bill">
+                    <div class="card-body text-dark">
+                      <span class="badge text-bg-warning">JavasScript</span>
+                      <span class="badge text-bg-info">React</span>
+                      <h5 class="card-title">Bill Gates</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+                  <!-- card -->
+                  <div class="card shadow-sm mb-4 rounded-3 mx-2 " style="width: 18rem;">
+                    <img src="../Trabajo-de-Front/img/ada.jpeg" class="card-img-top" alt="Ada">
+                    <div class="card-body text-dark">
+                      <span class="badge text-bg-secondary">Negocios</span>
+                      <span class="badge text-bg-danger">Startups</span>
+                      <h5 class="card-title">Ada Lovelance</h5>                      
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+                  </div>
+
+                </div>
+      </section>
+
+      <!-- card horizontal -->
+      <section class="row m-0">
+          <div class="col-12 col-md-6 p-0">
+            <img src="../Trabajo-de-Front/img/hawaii2.jpg" alt="imagen" class="img-fluid h-100 object-fit-cover">
+          </div>
+          <div class="col-12 col-md-6 bg-dark text-light text-center text-md-start opacity-75">
+            <h3 class="p-4">Bs As - Octubre </h3>
+            <p class="px-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta excepturi saepe ut eveniet dolorum hic quam sapiente aut quaerat, laudantium velit nisi aspernatur qui nostrum veniam itaque vitae possimus? Aut! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque temporibus, hic labore vel eligendi magnam aliquid consequuntur, eius itaque atque culpa iste provident recusandae distinctio perspiciatis! Quasi sunt similique ullam?</p>
+            <a href="#" class="btn btn-outline-light m-4">Conocé más</a>
+
+          </div>
+
+      </section>
+      <!-- formulario section -->
+      <section class="bg-white text-center altura-form">
+                <h6 class="mt-2">Conviertete en un</h6>
+                <h3 class="mb-4 fs-1">Orador</h3>
+                <p class="mx-5">Anótate para una charla ignite. Cuéntanos de que quieres hablar!</p>
+              <div class=" row w-75 mx-auto my-4">
+                    <input class="col-6 col-lg form-control my-2 my-lg-4 me-lg-3 " type="text"  placeholder="Nombre">
+                    <input class="col-6 col-lg form-control my-2 my-lg-4 ms-lg-3 " type="text" placeholder="Apelido">
+                    
+                      <textarea class="form-control " id="textarea" rows="5" placeholder="Sobre que quieres hablar?"></textarea> 
+                      <span class=" form-text">Recuerda incluir un título para tu charla</span>
+                      <input class=" my-4 btn btn-form-fondo hover" type="submit" value="Enviar">
+                    
+              </div>
+      </section>
+
+
+</main>
+
+<footer class="row mx-0 flex-column flex-lg-row bg-footer text-center py-4">
+  
+  <a href="#" class="navhover1 col py-1 text-decoration-none text-light " >Preguntas frecuentes</a>
+  <a href="#" class="navhover1 col py-1 text-decoration-none text-light " >Contáctanos</a>
+  <a href="#" class="navhover1 col py-1 text-decoration-none text-light " >Prensa</a>
+  <a href="#" class="navhover1 col py-1 text-decoration-none text-light " >Conferencias</a>
+  <a href="#" class="navhover1 col py-1 text-decoration-none text-light " >Términos y condiciones</a>
+  <a href="#" class="navhover1 col py-1 text-decoration-none text-light " >Estudiantes</a>
+
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+body{
+    min-height: 100vh;
+}
+
+nav {
+    background-color:#353a40;
+}
+.text{
+    color: aliceblue;
+}
+.icono{
+    
+    max-width: 30%;
+    min-width: 120px;
+}
+.fondoimg{
+    background-image: url(img/ba1.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center center ;
+    min-height:75vh;
+}
+
+.img-slide{
+    height: auto;
+    min-height:85vh;
+    max-height: 90vh;
+    object-fit:cover;
+    opacity: 70%;
+}
+.bg-img{
+    background-color: black;
+}
+
+.btn-comprar{
+    background-color: rgb(73, 182, 67);
+    border: 1px solid rgb(73, 182, 67) ;
+}
+
+
+.dim{
+    margin-top: 10vh;
+    padding: 10vw;
+}
+
+@media (min-width : 992px) {
+    .dim{
+        padding: 10vw;
+    }
+}
+.bg-footer{
+    background-color: #1e516e ; 
+}
+.hover:hover{
+    background-color: #96c93ed0;
+}
+.navhover1:hover{
+    opacity: 50%;
+}
+
+.btn-form-fondo{
+    background-color: #96c93e;
+    color: white;
+}
+.altura-form{
+    height: auto;
+    max-height: auto;
+}
+
