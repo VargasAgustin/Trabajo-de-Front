@@ -1,79 +1,76 @@
-//llamada de elementos del DOM
-const cantTickets = document.querySelector("#cantidad");
-const selector = document.querySelector("select");
-const importe = document.querySelector("label[for=monto]");
-const btnResumen = document.querySelector("#resumen");
-const btnBorrar = document.querySelector("#borrar");
-const nombre=document.querySelector('#name');
-const apellido=document.querySelector('#lastname');
-const email=document.querySelector('#email');
 
+// elementos a usar
+ 
+let nombre, apellido, email, valCant, valSelect, importe;
 
+nombre= document.querySelector('#name');
+apellido= document.querySelector('#lastname');
+email= document.querySelector('#email');
+valCant= document.querySelector('#cantidad');
+valSelect= document.querySelector('#selector');
+importe= document.querySelector('.total');
+const btnBorrar= document.querySelector('#borrar');
+const btnResumen= document.querySelector('#resumen');
 const precioTicket= 200;
-//valor del selector ingresado por el usuario
-let valSelect;
-selector.addEventListener('input',()=>valSelect=selector.value);
-//cantidad de tickets ingresado por el usuario
-let valCant;
-cantTickets.addEventListener('input',()=>valCant=cantTickets.value);
-// nombre ingresado
-let nom;
-nombre.addEventListener('input',()=>nom=nombre.value);
-let ap;
-apellido.addEventListener('input',()=>ap=apellido.value);
-let correo;
-email.addEventListener('input',()=>correo=email.value);
-//botones:
-// boton resumen
-btnResumen.addEventListener('click',alertCampos)
-
-// boton borrar
-btnBorrar.addEventListener('click',borrarForm);
-
-
-selector.addEventListener('input',()=>{if(valCant!=null && valSelect!=null)totalAPagar()});
-cantTickets.addEventListener('input',()=>{if(valCant!=null && valSelect!=null)totalAPagar()});
-
-
-//funcion que calcula el valor a pagar segun los datos ingresados
-
-function totalAPagar(){
+//variables adicionales
 let total;
+let est=.2,trainee=.5,junior=.75;
 
-    if(valSelect==1)total=(precioTicket*.2)*valCant
-    if(valSelect==2)total=(precioTicket*.5)*valCant
-    if(valSelect==3)total=(precioTicket*.75)*valCant
 
-importe.textContent='Total a pagar: $ '+total;
-return total;
+//modificacion automatica del importe cuando ingresamos cantidad y categoria
+valCant.addEventListener('input',()=>{ valCant!=null ? totalAPagar():null });
+valSelect.addEventListener('input',()=>{valSelect!=null ? totalAPagar():null});
 
+//funcion importe a pagar, calcula el total a pagar con los descuentos correspondientes segun categoria
+function totalAPagar(){
+    switch(valSelect.value){
+        case "1" : total=precioTicket*est*valCant.value
+        break;
+        case "2": total=precioTicket*trainee*valCant.value
+        break;
+        case "3": total=precioTicket*junior*valCant.value
+        break;
+        default: total=precioTicket*valCant.value
+        break;
+    }
+    importe.textContent='Total a pagar: $ '+total;
+    return total; 
 }
-
+// funcion borrar, resetea los campos del form 
 function borrarForm(){
-    selector.value=0;
-    cantTickets.value=null;
+    
+    valSelect.value=0;
+    valCant.value=null;
     nombre.value=null;
     apellido.value=null;
     email.value=null;
-    importe.textContent="Total a pagar: $";
+    importe.textContent="Total a pagar: $"
 }
-
 // funcion alerta para confirmacion de compra
-function alerta(){
+function alerta() {
     swal({
-        title:'Confirmación de compra',
-        text:`Nombre: ${nom} \n Apellido: ${ap} \n Email: ${correo} \n Cantidad de tickets: ${valCant} \n Total a pagar: ${totalAPagar()}`,
-        buttons:['Cancelar','Aceptar']
+        title: 'Confirmación de compra',
+        text: `Nombre: ${nombre.value} \n Apellido: ${apellido.value} \n Email: ${email.value} \n Cantidad de tickets: ${valCant.value} \n Total a pagar: ${totalAPagar()}`,
+        buttons: ['Cancelar', 'Aceptar']
     })
-    .then( (value) => {
-        if(value==true){
-            swal({title:'Compra realizada con exito',icon:'success'})
-        }else swal({title:'Compra cancelada'})
-    })
+        .then((value) => {
+            if (value == true) {
+                swal({ title: 'Compra realizada con exito', icon: 'success' });
+            } else swal({ title: 'Compra cancelada' });
+        });
+}
+function alertCampos() {
+    if (valCant.value == '' || valSelect.value == '' || nombre.value == '' || apellido.value == '' || email.value == '') {
+        swal({ title: 'Debe completar todos los campos para comprar', icon: 'warning' });
+    }
+    else alerta() ;
 }
 
-function alertCampos(){
-    if(valCant==null || valSelect==null || nom==null || ap==null || email==null){
-    swal({title:'Debe completar todos los campos para comprar', icon:'warning'})}
-    else alerta()
-}
+//boton borrar 
+btnBorrar.addEventListener('click',(e)=>{e.preventDefault();
+    borrarForm();})
+
+//boton resumen 
+btnResumen.addEventListener('click',(e)=>{e.preventDefault();
+    alertCampos();});
+

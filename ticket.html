@@ -13,7 +13,7 @@
 <header>
     <nav class="navbar navbar-expand-lg text-light">
         <div class="container-fluid">
-            <a class="navbar-brand text-light icono" href="index.html"><img src="../Trabajo-de-Front/img/iconcodoacodo.png" class="icono" alt="">Conf Bs As</a>
+            <a class="navbar-brand text-light icono" href="index.html"><img src="/img/iconcodoacodo.png" class="icono" alt="">Conf Bs As</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,7 +31,7 @@
 </header>
 <main>
     <!-- cards de descuentos -->
-    <section class="row m-0 mt-lg-3 mx-auto w-75">
+    <section class="container row m-0 mt-lg-3 mx-auto w-75">
         <div class="col-lg card w-75 mx-auto mx-lg-2 my-2 border-primary">
             <div class="card-body text-center">
                 <h5 class="card-tittle">Estudiante</h5>
@@ -62,58 +62,60 @@
     <!-- formulario de compra -->
     <h4 class="text-center">Venta</h4>
     <h2 class="text-center">Valor de ticket $200</h2>
-    
-    <section class="row m-0 m-3 justify-content-center">
-            <!-- nombre -->
-            <div class="col-md-4 my-2 form-floating">
-                <input type="text" class=" form-control" id="name" placeholder="nombre">
-                <label class="ps-4" for="name">Nombre</label>
-                
-            </div>
-            <!-- //Apellido -->
-            <div class="col-md-4 my-2 form-floating">    
-                <input type="text" class="form-control" id="lastname" placeholder="apellido">
-                <label class="ps-4" for="lastname">Apellido</label>
-            </div>
-            <!-- //email -->
-            <div class="col-md-8 my-2 form-floating">    
-                <input type="email" class="form-control" id="email" placeholder="Email">
-                <label class="ps-4" for="email">Email</label>
-            </div>
-            <div class="row m-0"></div>
-                <!-- cantidad de tickets -->
-                <div class="col-md-4 my-2 form-floating">    
-                    <input type="number" class="form-control" min="0" id="cantidad" placeholder="Cantidad">
-                    <label class="ps-4" for="cantidad">Cantidad</label>
-                </div>
-                <!-- selector -->
-                <div class="col-md-4 my-md-auto">
-                    <select  id="selector"class="form-select form-select-lg py-md-2">
-                        <option value="0" disabled selected>Categoria</option>
-                        <option value="1">Estudiante</option>
-                        <option value="2">Trainee</option>
-                        <option value="3">Junior</option>
-                    </select>
-                </div>
-            </div>
-            <!-- indicador de monto a pagar -->
-            <div class="col-md-8 my-2 form-floating">    
-                <input id="monto" type="text" class="bg-primary opacity-50 form-control"  placeholder="Cantidad" disabled>
-                <label class="ps-4 text-primary-emphasis" for="monto">Total a pagar: $</label>
-            </div>
-            <!-- botones -->
-            
-                <div class="row m-0 justify-content-md-center">
-                <button type="button" id="borrar" class="my-2 mx-md-2 py-md-2 col-md-3 col-12 btn text-light btn-form-fondo hover">Borrar</button>
-                <button type="button" id="resumen" class="my-2 mx-md-2 py-md-2 col-md-3 col-12 btn text-light btn-form-fondo hover">Resumen</button>
-                </div>
-            
-    </section>
-
+        <div class="container">
+            <form id="formulario" class="row m-0 row-cols-1 row-cols-md-2 g-4 justify-content-center">
+                    <!-- nombre -->
+                    <div class="col  form-floating">
+                        <input type="text" class=" form-control" id="name" placeholder="nombre">
+                        <label class="ps-4" for="name">Nombre</label>
+                        
+                    </div>
+                    <!-- //Apellido -->
+                    <div class="col  form-floating">    
+                        <input type="text" class="form-control" id="lastname" placeholder="apellido">
+                        <label class="ps-4" for="lastname">Apellido</label>
+                    </div>
+                    <!-- //email -->
+                    <div class="col-md-12  form-floating">    
+                        <input type="email" class="form-control" id="email" placeholder="Email">
+                        <label class="ps-4" for="email">Email</label>
+                    </div>
+                    
+                        <!-- cantidad de tickets -->
+                        <div class="col form-floating">    
+                            <input type="number" class="form-control" min="0" id="cantidad" placeholder="Cantidad">
+                            <label class="ps-4" for="cantidad">Cantidad</label>
+                        </div>
+                        <!-- selector -->
+                        <div class="col">
+                            <select  id="selector"class=" py-3 py-md-3 form-select  form-select-md py-md-2">
+                                <option value="0" selected>Sin Categoria</option>
+                                <option value="1">Estudiante</option>
+                                <option value="2">Trainee</option>
+                                <option value="3">Junior</option>
+                            </select>
+                        </div>
+                    
+                    <!-- indicador de monto a pagar -->
+                    <div class="col-md-12 form-floating">    
+                        <input id="monto" type="text" class="bg-primary opacity-50 form-control"  placeholder="Cantidad" disabled>
+                        <label class="total ps-4 text-primary-emphasis" for="monto">Total a pagar: $</label>
+                    </div>
+                    <!-- botones -->
+                    
+                    <div class="col ">
+                        <button type="button" id="borrar" class=" py-2 col-12 btn text-light btn-form-fondo hover">Borrar</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" id="resumen" class=" py-2 col-12 btn text-light btn-form-fondo hover">Resumen</button>
+                    </div>
+                    
+            </form>
+        </div>
 
 </main>
 
-<footer class="row mx-0 flex-column flex-lg-row bg-footer text-center py-4">
+<footer class="row mt-4 mx-0 flex-column flex-lg-row bg-footer text-center py-4">
 
     <a href="#" class="navhover1 col py-1 text-decoration-none text-light " >Preguntas frecuentes</a>
     <a href="#" class="navhover1 col py-1 text-decoration-none text-light " >Contáctanos</a>
